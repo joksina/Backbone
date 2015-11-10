@@ -16,7 +16,7 @@ var TodoView = Backbone.View.extend({
 	//rerender
 	initialize: function(){
 		this.model.on('change', this.render, this);
-		this.model.on('destroy', this.render, this);
+		this.model.on('destroy', this.remove, this);
 	},
 	toggleStatus: function(){
 		this.model.toggleStatus();
